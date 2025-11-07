@@ -1,0 +1,6 @@
+video {
+    width: 100%;
+    height: calc(100vh - 80px); /* Resta el alto de la toolbar (ajústalo si es necesario) */
+    object-fit: cover;
+    display: block;
+  }
