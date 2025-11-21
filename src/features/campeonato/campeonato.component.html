@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <img src="iconos/Campeonato.png">
+    <div class="barraTituloCRUD">
+       Campeonatos Mundiales de Fútbol
+    </div>
+</mat-toolbar>
+
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Buscar</mat-label>
+        <input matInput [(ngModel)]="textoBusqueda">
+    </mat-form-field>
+    <button mat-stroked-button color="primary" (click)="buscar()">Buscar</button>
+</div>
+
+<div>
+    <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+    <button mat-raised-button color="accent" (click)="modificar()">Modificar</button>
+    <button mat-raised-button color="warn" (click)="eliminar()">Eliminar</button>
+    <ngx-datatable class="dark" [rows]="campeonatos" [columns]="columnas"
+    [rowHeight]="'auto'" [headerHeight]="50" [footerHeight]="50" [limit]="10" 
+    [columnMode]="modoColumna.force" [selectionType]="tipoSeleccion.single"
+    (activate)="escoger($event)"></ngx-datatable>
+</div>
+

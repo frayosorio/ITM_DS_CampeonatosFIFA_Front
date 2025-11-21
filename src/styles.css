@@ -1,2 +1,19 @@
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import '../node_modules/@swimlane/ngx-datatable/themes/material.css';
+@import '../node_modules/@swimlane/ngx-datatable/themes/dark.css';
+@import '../node_modules/@swimlane/ngx-datatable/themes/bootstrap.css';
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.barraTituloCRUD{
+    background: rgb(24, 2, 53);
+    color: #fff;
+    height: 75px;
+    text-align: center; /* Centrar horizontalmente */
+    display: flex; /* Utilizamos flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente con flexbox */
+    align-items: center; /* Centrar verticalmente con flexbox */
+    width: 100%; /* Ancho completo */    
+}

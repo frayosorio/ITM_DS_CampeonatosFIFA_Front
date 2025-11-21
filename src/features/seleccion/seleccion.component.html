@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <div class="barraTituloCRUD">
+        Selecciones del Mundo
+    </div>
+</mat-toolbar>
+
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Buscar</mat-label>
+        <input matInput [(ngModel)]="textoBusqueda">
+    </mat-form-field>
+    <button mat-stroked-button color="primary" (click)="buscar()">Buscar</button>
+</div>
+
+<div>
+    <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+    <button mat-raised-button color="accent" (click)="modificar()">Modificar</button>
+    <button mat-raised-button color="warn" (click)="eliminar()">Eliminar</button>
+    <ngx-datatable [rows]="selecciones" [columns]="columnas" class="dark" [rowHeight]="'auto'"
+        [columnMode]="modoColumna.force" [headerHeight]="50" [footerHeight]="50" [limit]="10"
+        (activate)="escoger($event)"  [selectionType]="tipoSeleccion.single">
+    </ngx-datatable>
+</div>

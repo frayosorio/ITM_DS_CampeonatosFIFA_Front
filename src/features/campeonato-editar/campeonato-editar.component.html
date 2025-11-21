@@ -1,0 +1,25 @@
+<div mat-dialog-content>
+    <h2>{{datos.encabezado}}</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="datos.campeonato.nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>País</mat-label>
+        <mat-select [(value)]="datos.campeonato.paisOrganizador" [compareWith]="compararSelecciones">
+            <mat-option *ngFor="let p of datos.selecciones" [value]="p">
+                {{p.nombre }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Año</mat-label>
+        <input matInput [(ngModel)]="datos.campeonato.year">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="datos">Aceptar</button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="">Cancelar</button>
+</div>
